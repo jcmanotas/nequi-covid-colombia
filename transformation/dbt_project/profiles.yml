@@ -1,0 +1,14 @@
+etl_covid_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 35432
+      user: covid_user
+      password: covid_2025
+      dbname: covid_db
+      schema: raw_data
+      threads: 4
+      keepalives_idle: 0
+      sslmode: prefer
