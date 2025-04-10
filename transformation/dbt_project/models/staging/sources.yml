@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: covid_data
+    description: Datos crudos provenientes del repositorio
+    database: analytics  # ajusta esto si usas otro nombre de BD
+    schema: raw_data     # ajusta al esquema donde estén los datos crudos
+    tables:
+      - name: casos_covid
+        description: Casos reportados de COVID en Colombia
+        columns:
+          - name: departamento
+            description: Código DIVIPOLA del departamento
+          - name: departamento_nom
+            description: Nombre del departamento
+          - name: fecha_de_notificaci_n
+            description: Fecha de notificación
+          - name: estado
+            description: Estado clínico
+          - name: fuente_tipo_contagio
+            description: Tipo de contagio
+          - name: ubicacion
+            description: Ubicación del caso
+          - name: recuperado
+            description: Estado de recuperación
+
